@@ -16,3 +16,8 @@ script:
 
 after_script:
   - php vendor/bin/coveralls -v
+
+# do not run performance tests as they take too long to run and are killed by Travis
+branches:
+  except:
+    - perf-tests
